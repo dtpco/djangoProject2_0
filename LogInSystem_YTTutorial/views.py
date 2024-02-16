@@ -4,12 +4,27 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return render(request,"LogInSystem_YTTutorial/home.html")
+    return render(request, "LIS/index.html")
+
+
 def signup(request):
-    return render(request,"LogInSystem_YTTutorial/signup.html")
+    if request.method == "POST":
+        # username = request.POST.get("username")
+        username = request.POST['username']
+        firstname = request.POST['firstname']
+        lastname = request.POST['lastname']
+        email = request.POST['email']
+        password = request.POST['password']
+        confirm = request.POST['confirm']
+
+    return render(request, "LIS/signup.html")
+
 
 def signin(request):
-    return render(request,"LogInSystem_YTTutorial/signin.html")
+    return render(request, "LIS/signin.html")
 
-def signout(request):
-    pass
+
+def base(request):
+    return render(request, "LIS/base.html")
+
+

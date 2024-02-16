@@ -17,7 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from LogInSystem_YTTutorial import views
+
 urlpatterns = [
+    path('home/', include('LogInSystem_YTTutorial.urls')),
     path('admin/', admin.site.urls),
-    path('login/', include('LogInSystem_YTTutorial.urls')),
+    path('signin/', views.signin, name='signin'),
+    path('signup/', views.signup, name='signup'),
+    path('base/', views.base, name='base')
+
 ]
