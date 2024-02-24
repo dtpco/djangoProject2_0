@@ -1,0 +1,89 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <style>
+        body {
+            background-color: #f5f5f5;
+            text-align: center; /* Center elements horizontally */
+            font-family: Arial, sans-serif;
+            display: flex; /* Divide into two sections */
+            flex-direction: row;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background-color: #4CAF50; /* Green color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer; /* Make it look like a button */
+        }
+
+        .button:hover {
+            background-color: #3e8e41; /* Darker green on hover */
+        }
+        
+         section {
+            flex: 1; /* Make sections equal width */
+            padding: 20px;
+        }
+
+        .image-section {
+            /* Styling for the section with the image */
+        }
+
+        .text-section {
+            /* Styling for the section with the text and buttons */
+        }
+
+        img {
+            width: 200px; /* Adjust width as needed */
+        }
+        
+        /* Style the counter cards */
+        .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        align-content: center;
+        text-align: center;
+        background-color: lightyellow;
+        }
+        
+        .card-vl {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        text-align: center;
+        background-color: lightyellow;
+        align-items: center;
+        align-content: center;
+        }
+    </style>
+   
+    <title>LogInSystem_YTTutorial</title>
+</head>
+<body>
+    <section class="image-section">
+        <h1>Rocket Basket: Shop Fast, Ship Faster</h1> 
+        <img src="jetbrains://pycharm/navigate/reference?project=djangoProject2&path=templates/LIS/rb.jpg" alt="RocketBasketLogo">
+    </section>
+   
+    <section class="text-section">
+        <a class="button" href='{% url "signin" %}'>Sign In</a>
+        <a class="button" href='{% url "signup" %}'>Register</a>
+        
+        {% block content %} {% endblock %}
+    </section>
+    
+        
+</body>
+</html>
