@@ -1,4 +1,4 @@
-{% load static %}
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -47,26 +47,48 @@
         }
 
         img {
-            width: 200px; /* Adjust width as needed */
+            width: inherit; /* Adjust width as needed */
         }
         
-        /* Style the counter cards */
         .card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        padding: 16px;
-        align-content: center;
-        text-align: center;
-        background-color: lightyellow;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            max-width: 300px;
+            margin: 0 auto;
+            text-align: left;
+            transition: background-color 0.2s ease-in-out;
         }
-        
-        .card-vl {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        padding: 16px;
-        text-align: center;
-        background-color: lightyellow;
-        align-items: center;
-        align-content: center;
+
+        .card:hover {
+            background-color: #f5f5f5;
         }
+        .messages {
+            list-style: none;
+            padding: 0;
+        }
+
+        .message {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .message.info {
+            background-color: #e0f7fa;
+        }
+
+        .message.success {
+            background-color: #dff0d8;
+        }
+
+        .message.warning {
+            background-color: #fcf8e3;
+        }
+
+.message.error {
+    background-color: #f2dede;
+}
     </style>
    
     <title>LogInSystem_YTTutorial</title>
@@ -74,14 +96,16 @@
 <body>
     <section class="image-section">
         <h1>Rocket Basket: Shop Fast, Ship Faster</h1> 
-        <img src="jetbrains://pycharm/navigate/reference?project=djangoProject2&path=templates/LIS/rb.jpg" alt="RocketBasketLogo">
+        <img src="jetbrains://pycharm/navigate/reference?project=djangoProject2&path=djangoProject2/static/rb.jpg" alt="RocketBasketLogo">
     </section>
    
     <section class="text-section">
+        <br><br>
         <a class="button" href='{% url "signin" %}'>Sign In</a>
         <a class="button" href='{% url "signup" %}'>Register</a>
-        
+        <div class="card">
         {% block content %} {% endblock %}
+        </div>
     </section>
     
         

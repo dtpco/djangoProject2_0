@@ -1,19 +1,27 @@
 {% extends "index.html" %}
 {% block content %}
     
-        <div class="login-input">
+        <div>
         <form action="" method="post">
             {% csrf_token %}    
-        
-                <label for="id_username">Username</label>
+            <br>
+                <label for="id_username">Username</label><br>
                 <input type="text" id="id_username" name="username" placeholder="Enter username" required>
                 <br>
-                <label for="id_password">Password</label>
+                <label for="id_password">Password</label><br>
                 <input type="password" id="id_password" name="password" placeholder="Enter password" required>
+                <br>
                 <br>
                 <a href="{% url "base" %}">Forgot password?</a>
                 <br>
                 <br>
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li class="message {{ message.tags }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
                 <button type="submit">Sign In</button> <a class="button" href='{% url "index" %}'>Back</a>
         
         </form>

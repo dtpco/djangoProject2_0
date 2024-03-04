@@ -20,10 +20,10 @@ from django.urls import path, include
 from LogInSystem_YTTutorial import views
 
 urlpatterns = [
-    path('home/', include('LogInSystem_YTTutorial.urls')),
+    path('index/', include('LogInSystem_YTTutorial.urls')),
     path('admin/', admin.site.urls),
     path('signin/', views.signin, name='signin'),
-    path('signup/', views.signup, name='signup'),
-    path('base/', views.base, name='base')
+    path('base/', views.base, name='base'),
+    path('signup/', views.signup, name='signup')
 
 ]
