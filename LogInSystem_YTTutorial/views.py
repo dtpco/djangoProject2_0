@@ -25,6 +25,7 @@ def signup(request):
         myuser.save()
         if username is not None and password is not None and firstname is not None and lastname is not None and email is not None and confirm is not None and confirm == password:
             messages.success(request, "Your data has been saved successfully.")
+            #return render(request, "LIS/signin.html")
         elif username is not None and password is not None and firstname is not None and lastname is not None and email is not None and confirm is not None and confirm != password:
             messages.error(request, "Passwords do not match.")
             return render(request, "LIS/signup.html")
@@ -42,10 +43,10 @@ def signin(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            #messages.success(request, "Logged in successfully.")
+            messages.success(request, "Logged in successfully.")
             return render(request, "LIS/home.html")
         else:
-            #messages.error(request, "Incorrect username or password.")
+            messages.error(request, "Incorrect username or password.")
             return render(request, "LIS/signin.html")
 
     return render(request, "LIS/signin.html")
@@ -59,3 +60,5 @@ def home(request):
     return render(request, "LIS/home.html")
 
 
+def registration(request):
+    return render(request, "LIS/registration.html")

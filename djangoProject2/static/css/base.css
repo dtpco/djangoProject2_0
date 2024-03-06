@@ -106,7 +106,7 @@
 .register-image {
     width: 30%;
     float: right;
-    background-image: url("../rb.jpg");
+    background-image: url("../../../templates/djangoProject2/static/rb.jpg");
     background-size: cover;
     background-position: right;
 }
