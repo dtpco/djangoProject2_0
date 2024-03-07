@@ -11,6 +11,6 @@ urlpatterns = [
     path('registration/', views.registration, name='registration'),
     path('update/', views.update, name='update'),
     path('switchaccounttype/', views.switchaccounttype, name='switchaccounttype'),
-    path('sellerreg/', views.sellerreg, name='sellereg')
-
+    path('sellerreg/', views.sellerreg, name='sellereg'),
+    path('editproflandingpage/', views.editproflandingpage, name='editproflandingpage')
 ]

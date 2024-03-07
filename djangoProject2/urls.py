@@ -27,7 +27,8 @@ urlpatterns = [
     path('signup/', views.signup, name='signup'),
     path('registration/', views.registration, name='registration'),
     path('update/', views.update, name='update'),
-    path('sellerreg/', views.sellerreg, name='sellerreg')
+    path('sellerreg/', views.sellerreg, name='sellerreg'),
+    path('editproflandingpage/', views.editproflandingpage, name='editproflandingpage')
 
 
 ]
