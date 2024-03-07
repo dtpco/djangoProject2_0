@@ -1,3 +1,4 @@
+{% load static %}
 
 <!doctype html>
 <html lang="en">
@@ -91,18 +92,18 @@
 }
     </style>
    
-    <title>LogInSystem_YTTutorial</title>
+    <title>SimpleEcommerce</title>
 </head>
 <body>
     <section class="image-section">
         <h1>Rocket Basket: Shop Fast, Ship Faster</h1> 
-        <img src="djangoProject2/static/rb.jpg" alt="RocketBasketLogo">
+        <img src="{% static 'rb.jpg' %}" alt="RocketBasketLogo">
     </section>
    
     <section class="text-section">
         <br><br>
         <a class="button" href='{% url "signin" %}'>Sign In</a>
-        <a class="button" href='{% url "signup" %}'>Register</a>
+        <a class="button" href='{% url "registration" %}'>Register</a>
         <div class="card">
         {% block content %} {% endblock %}
         </div>

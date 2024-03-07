@@ -1,0 +1,135 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: red;
+}
+
+.login-form {
+    width: 40%;
+    position: absolute;
+    left: 25px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.login-input {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: aquamarine;
+}
+
+.login-input[type="submit"] {
+    background-color: #000;
+    color: yellow;
+    cursor: pointer;
+}
+
+.login-input[type="submit"]:hover {
+
+}
+
+.login-title {
+    text-align: left;
+    font-family: Ubuntu, sans-serif;
+    font-size-adjust: inherit;
+    font-weight: bold;
+}
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+}
+
+.register-title {
+    text-align: left;
+    font-family: Ubuntu, sans-serif;
+    font-size-adjust: inherit;
+    font-weight: bold;
+}
+
+.register-clickLogin {
+    text-align: left;
+    font-family: Ubuntu, sans-serif;
+    font-size-adjust: inherit;
+    font-weight: bold;
+}
+
+.register-form {
+    width: 40%;
+    position: absolute;
+    left: 25px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.register-form h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.register-form input {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.register-form input[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.register-form input[type="submit"]:hover {
+    background-color: #333;
+}
+
+.register-image {
+    width: 30%;
+    float: right;
+    background-image: url("../rb.jpg");
+    background-size: cover;
+    background-position: right;
+}
+
+.login-signup {
+    text-align: left;
+    font-family: Ubuntu, sans-serif;
+    font-size-adjust: inherit;
+    font-weight: bold;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}

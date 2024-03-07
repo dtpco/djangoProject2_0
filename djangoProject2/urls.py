@@ -17,14 +17,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from LogInSystem_YTTutorial import views
+from SEcommerce import views
 
 urlpatterns = [
-    path('index/', include('LogInSystem_YTTutorial.urls')),
+    path('index/', include('SEcommerce.urls')),
     path('admin/', admin.site.urls),
     path('signin/', views.signin, name='signin'),
     path('base/', views.base, name='base'),
     path('signup/', views.signup, name='signup'),
-    path('registration/', views.registration, name='registration')
+    path('registration/', views.registration, name='registration'),
+    path('update/', views.update, name='update'),
+    path('sellerreg/', views.sellerreg, name='sellerreg')
+
 
 ]
